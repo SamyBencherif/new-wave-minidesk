@@ -13,7 +13,7 @@ this EXPLORATION IN PERSONAL COMPUTER INTERACTION includes
 
 The most exciting part of this project is the graphics format. The desktop-windowing and editor features exist simply to give the format an excellent place to live. 
 
-MDK graphics format aims to remove all parts of the program that you "have to include for it to work", but don't contribute to the unique definition of your program. It is turing complete.
+MDK graphics format aims to remove all parts of the program that you have to include for it to work but that don't contribute to your unique program's definition. MDK lets you focus on your program's meaning--rather than hinting how computers actually work via obligatory incantations all the time. MDK is turing complete.
 
 ### Sample MDK Program (drawing)
 

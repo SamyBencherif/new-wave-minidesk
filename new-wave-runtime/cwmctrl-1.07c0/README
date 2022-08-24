@@ -1,4 +1,7 @@
 
+2022 cwmctrl is a modified version of wmctrl built for direct interfacing with C language
+
+
 wmctrl
 A command line tool to interact with an EWMH/NetWM compatible X Window Manager.
 

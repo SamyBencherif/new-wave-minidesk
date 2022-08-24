@@ -1,0 +1,10 @@
+mousedown:
+  circles.push({x,y,r:10})
+
+loop:
+  background(BLUE)
+  
+  //for circ* in circles[]:
+  for circles:
+    DrawCircle(x, y, r, RED)
+

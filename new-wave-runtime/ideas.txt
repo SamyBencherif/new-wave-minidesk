@@ -1,0 +1,10 @@
+
+ICON WORKSPACE NWMD NWR
+
+opens two new desktops
+
+[D0 - souce]
+[ vim source.c ] [ raylib.h ]
+                 [ shell $PR]
+[D1 - runtime]
+[ shell(invisible) $PR -- repeat m ]

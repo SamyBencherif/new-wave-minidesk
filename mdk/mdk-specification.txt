@@ -1,0 +1,85 @@
+MDK - Minidesk File
+
+OBJECTIVE - reduce number of keystrokes needed to create interactive graphical computer programs
+OBJECTIVE - competitve benchmark results
+OBJECTIVE - touch-friendly
+OBJECTIVE - suitable for games, demoscene, and productivity applications
+OBJECTIVE - reduce idea to implementation lifecycle
+OBJECTIVE - tightly couple pixel data illustration and generation activities into main editor
+
+INSPIRATION - Reimagine computer-text-graphics input, uncontaminated by the status quo
+
+STRETCH - F1 memory dump, F2 memory load
+
+MDK CODE SEGMENT
+plaintext MDK program
+MDK GRAPHICS SEGMENT
+plaintext GSequence file,
+ascii palette def,
+1,3,4 band hex seq
+END FILE
+
+MDK Program
+
++implicit arrays
+
+mousedown:
+  aCircles.append({x,y,r:10})
+
+loop:
+  background(BLUE)
+  for circ* in aCircles:
+    drawCircle(x,y,r, RED)
+
++object-runtime pairs
+
+fish : { 
+  x, y, color, 
+  runtime:=>
+  {
+    // has t, dt, et al
+    // has access to aFish
+    // of course has access to own vars
+    x++
+    y++
+  }
+}
+init:
+  aFish.append(new fish(*R(CIRC, 20), R(COLOR)))
+
+// <0,0> is center of screen
+// extW extH = half of width, height
+// W,H = full width, height
+
+GSEQ
+
+A SEQUENCE OF GRAPHICAL COMMANDS to define a <0,0> center composite image
+
+circ 0 0 20 RED
+line -10 -10 10 10 BLACK 3
+
+ASCIIPAL
+
+A sequence of characters to create a human-readable text representation of an image
++ color definitions for each char
+
+___________
+___D___D___
+___D___D___
+___________
+_D_______D_
+_D_______D_
+_DDDDDDDDD_
+___________
+
+_ = yellow : <100,100,0>
+D = brown : <50,10,0>
+
+HEXIMAGE
+
+00 00 00 00 00
+00 00 FF 00 FF
+00 00 00 00 00
+00 00 FF FF FF
+
+A complete truecolor bitmap defintion

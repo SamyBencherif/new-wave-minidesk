@@ -111,6 +111,8 @@ for k,v in sections.items():
   v_translated = []
   for line in v:
     line_translated = ""
+
+    # here I started the array push translation activity
     if hasLiteral(line, ".push"):
       arr = line.split(".push")[0].strip()
       data = line.split(".push")[1].strip()
@@ -128,6 +130,11 @@ for k,v in sections.items():
           k = k.split(":")[0]
         ds.append(k.strip())
 
+    # next I want to translate the for loop
+
+    # then if statements
+
+    # then calls, remember to expand raylib (in transpile you do opposite)
 
   section_translated[k] = v_translated
 
